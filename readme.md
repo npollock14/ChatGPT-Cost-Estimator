@@ -1,6 +1,6 @@
 # ChatGPT Cost Estimator
 
-`ChatGPT-Cost-Estimator` is a tool designed to estimate the costs of your ChatGPT Plus conversation history as if it were executed using the OpenAI API. It uses the `conversations.json` file, which is an export of your ChatGPT sessions, and calculates the monthly costs based on token count.
+`ChatGPT-Cost-Estimator` is a tool designed to estimate the costs of your ChatGPT Plus conversation history as if it were executed using the OpenAI API. It uses the `conversations.json` file exported from ChatGPT and estimates OpenAI API monthly costs based on token count.
 
 Use this tool to estimate if it may be more cost effective to use ChatGPT Plus or the OpenAI API.
 
