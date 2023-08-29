@@ -39,7 +39,15 @@ Total cost for ChatGPT Plus: $180.00
 
 1. Clone this repository to your local machine.
 
-2. Navigate to the cloned directory:
+    ```bash
+    git clone https://github.com/npollock14/ChatGPT-Cost-Estimator.git
+    ```
+
+2. Navigate to the cloned directory.
+
+    ```bash
+    cd ChatGPT-Cost-Estimator
+    ```
 
 3. Install the required Python libraries:
 
@@ -49,16 +57,15 @@ Total cost for ChatGPT Plus: $180.00
 
 ## Obtaining the conversations.json file
 
-1. https://chat.openai.com/
+1. Open [ChatGPT](https://chat.openai.com/)
 2. Click on the user icon or the three dots in the bottom left corner.
-3. Settings > Data Controls > Export data
+3. Settings > Data Controls > Export data.
 4. Download the data from the link provided in the email.
 5. Rename the downloaded file to `conversations.json` and place it in the repo root.
 
 ## How to use ChatGPT Cost Estimator
 
 1. Ensure that the conversations.json file is in the root of the repository folder.
-
 2. Run the `chatgpt_cost_estimator.py` script.
 
     The script will display the monthly token counts and costs for both input and output, as well as the total estimated costs for using the ChatGPT API vs. ChatGPT Plus.
