@@ -17,8 +17,16 @@ def load_json_file(filename):
 def extract_text_content(message):
     if message["content"]["content_type"] == "text":
         return "".join(message["content"]["parts"])
-    elif message["content"]["content_type"] in ["execution_output", "code", "tool"]:
+    elif message["content"]["content_type"] in [
+        "execution_output",
+        "code",
+        "tether_quote",
+        "system_error",
+    ]:
         return message["content"]["text"]
+    elif message["content"]["content_type"] == "tether_browsing_display":
+        return message["content"]["result"]
+    print(f"Unknown content type: {message['content']['content_type']}")
     return None
 
 
@@ -39,6 +47,7 @@ def calculate_monthly_cost(conversations):
                 continue
 
             tokens = len(enc.encode(text_content))
+            # price role user messages as input tokens, and any other role as output tokens
             if message["author"]["role"] == "user":
                 data.append([date, tokens, 0])
             else:
