@@ -1,6 +1,12 @@
-# ChatGPT Cost Analyzer
+# ChatGPT Cost Estimator
 
-`ChatGPT-Cost-Analyzer` is a tool designed to estimate the costs of ChatGPT sessions as if they were executed using the OpenAI API. It uses the `conversations.json` file, which is an export of your ChatGPT sessions, and calculates the monthly costs based on token count.
+`ChatGPT-Cost-Estimator` is a tool designed to estimate the costs of ChatGPT sessions as if they were executed using the OpenAI API. It uses the `conversations.json` file, which is an export of your ChatGPT sessions, and calculates the monthly costs based on token count.
+
+**Note:** This tool assumes GPT-4 api pricing for all conversations.
+
+## Pricing constants:
+* Input @ $0.03 / 1K tokens	 
+* Output @ $0.06 / 1K tokens
 
 ## Example Output
 
@@ -25,7 +31,7 @@ Total cost for ChatGPT Plus: $180.00
 
 ## Prerequisites
 
-- You must have Python installed (tested with Python 3.11)
+- Python (tested with Python 3.11)
 
 ## Installation
 
@@ -45,13 +51,13 @@ Total cost for ChatGPT Plus: $180.00
 2. Click on the user icon or the three dots in the bottom left corner.
 3. Settings > Data Controls > Export data
 4. Download the data from the link provided in the email.
-5. Rename the downloaded file to conversations.json and place it in the repo root.
+5. Rename the downloaded file to `conversations.json` and place it in the repo root.
 
-## How to use ChatGPT Cost Analyzer
+## How to use ChatGPT Cost Estimator
 
 1. Ensure that the conversations.json file is in the root of the repository folder.
 
-2. Run the `chatgpt_cost_analyzer.py` script.
+2. Run the `chatgpt_cost_estimator.py` script.
 
     The script will display the monthly token counts and costs for both input and output, as well as the total estimated costs for using the ChatGPT API vs. ChatGPT Plus.
 
