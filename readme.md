@@ -14,19 +14,19 @@ Use this tool to estimate if it may be more cost effective to use ChatGPT Plus o
 
 ```
          Date  Input Tokens  Output Tokens  Input Cost  Output Cost  Total Cost
-  August 2023         60162         169996       $1.80       $10.20      $12.00
-    July 2023         79789         182852       $2.39       $10.97      $13.36
-    June 2023         63254         166160       $1.90        $9.97      $11.87
-     May 2023         29316         244757       $0.88       $14.69      $15.57
-   April 2023         38386          74385       $1.15        $4.46       $5.61
-   March 2023         28042         108606       $0.84        $6.52       $7.36
-February 2023         41835          76011       $1.26        $4.56       $5.82
- January 2023         12497          21323       $0.37        $1.28       $1.65
-December 2022          4216          43087       $0.13        $2.59       $2.72
+  August 2023       1626585         169996      $48.80       $10.20      $59.00
+    July 2023       1473313         182852      $44.20       $10.97      $55.17
+    June 2023       1239789         166160      $37.19        $9.97      $47.16
+     May 2023        788586         244757      $23.66       $14.69      $38.35
+   April 2023        382448          74385      $11.47        $4.46      $15.93
+   March 2023        431761         108606      $12.95        $6.52      $19.47
+February 2023        676726          76011      $20.30        $4.56      $24.86
+ January 2023         82320          21323       $2.47        $1.28       $3.75
+December 2022        580324          43087      $17.41        $2.59      $20.00
 
 Aggregate Costs:
  Input Tokens  Output Tokens  Input Cost  Output Cost  Total Cost
-       357497        1087177      $10.72       $65.24      $75.96
+      7281852        1087177     $218.45       $65.24     $283.69
 
 Total cost for ChatGPT Plus: $180.00
 ```
