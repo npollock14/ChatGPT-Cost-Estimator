@@ -35,6 +35,9 @@ def calculate_monthly_cost(conversations):
     data = []
 
     for convo in conversations:
+        # Since GPT-4 uses previous chats as input tokens, we'll consider the rolling_sum
+        rolling_sum = 0
+
         for _, value in convo["mapping"].items():
             message = value.get("message")
             if not message or message["author"]["role"] == "system":
@@ -47,10 +50,19 @@ def calculate_monthly_cost(conversations):
                 continue
 
             tokens = len(enc.encode(text_content))
-            # price role user messages as input tokens, and any other role as output tokens
+
+            # Add tokens to the rolling sum for input tokens
+            rolling_sum += tokens
+
+            # If rolling_sum exceeds 8,000, set it to 8,000 (the maximum allowed by GPT-4)
+            if rolling_sum > 8000:
+                rolling_sum = 8000
+
             if message["author"]["role"] == "user":
-                data.append([date, tokens, 0])
+                # here use rolling_sum as input tokens
+                data.append([date, rolling_sum, 0])
             else:
+                # here use tokens as output tokens - not dependent on rolling_sum
                 data.append([date, 0, tokens])
 
     df = pd.DataFrame(data, columns=["Date", "Input Tokens", "Output Tokens"])
