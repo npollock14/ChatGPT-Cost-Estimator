@@ -7,6 +7,7 @@ Use this tool to estimate if it may be more cost effective to use ChatGPT Plus o
 **Note:** This tool assumes GPT-4 api pricing for all conversations.
 
 ## Pricing constants:
+Source: [OpenAI API Pricing](https://openai.com/pricing)
 * Input @ $0.03 / 1K tokens	 
 * Output @ $0.06 / 1K tokens
 
