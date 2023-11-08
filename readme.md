@@ -19,8 +19,8 @@ Source: [OpenAI API Pricing](https://openai.com/pricing)
 
 ```
           Date  Input Tokens  Output Tokens  Vision Images Sent  Dall-E Images Received  Vision Cost  Dall-E Cost  Input Cost  Output Cost  Total Cost
- November 2023        141211          48604                  11                      24        $0.03        $0.16       $1.41        $1.46       $3.06
-  October 2023       1494391         186593                 318                     432        $0.29        $1.28      $14.94        $5.60      $22.11
+ November 2023        141211          48604                   3                       4        $0.03        $0.16       $1.41        $1.46       $3.06
+  October 2023       1494391         186593                  41                      32        $0.29        $1.28      $14.94        $5.60      $22.11
 September 2023       1406768         207387                   0                       0        $0.00        $0.00      $14.07        $6.22      $20.29
    August 2023       2644863         184873                   0                       0        $0.00        $0.00      $26.45        $5.55      $32.00
      July 2023       1914384         182852                   0                       0        $0.00        $0.00      $19.14        $5.49      $24.63
@@ -34,7 +34,7 @@ September 2023       1406768         207387                   0                 
 
 Aggregate Costs:
  Input Tokens  Output Tokens  Vision Images Sent  Dall-E Images Received  Input Cost  Output Cost  Vision Cost  Dall-E Cost  Total Cost
-     12637603        1544638                 329                     456     $126.37       $46.34        $0.32        $1.44     $174.47
+     12637603        1544638                  44                      36     $126.37       $46.34        $0.32        $1.44     $174.47
 
 Total cost for ChatGPT Plus including subscription: $240.00
 ```
