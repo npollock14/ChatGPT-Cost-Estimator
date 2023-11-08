@@ -122,9 +122,6 @@ def calculate_monthly_cost(conversations):
         # Since GPT-4 uses previous chats as input tokens, we'll consider the rolling_sum
         rolling_sum = 0
 
-        vision_images_count = 0  # To keep track of the number of vision images sent
-        dalle_images_count = 0  # To keep track of the number of DALL-E images received
-
         for _, value in convo["mapping"].items():
             message = value.get("message")
             if not message or message["author"]["role"] == "system":
@@ -137,11 +134,6 @@ def calculate_monthly_cost(conversations):
             tokens = 0
             for m in message_type:
                 tokens += m["tokens"]
-                if m["type"] == "vision":
-                    vision_images_count += 1  # Increment for each vision image found
-                elif m["type"] == "dall-e":
-                    dalle_images_count += 1  # Increment for each DALL-E image generated
-
             rolling_sum += tokens
             if rolling_sum > MAX_CONTEXT_TOKENS:
                 rolling_sum = MAX_CONTEXT_TOKENS
@@ -154,8 +146,8 @@ def calculate_monthly_cost(conversations):
                                 date,
                                 rolling_sum,
                                 0,
-                                vision_images_count,
-                                dalle_images_count,
+                                0,
+                                0,
                                 0,
                                 0,
                             ]
@@ -166,8 +158,8 @@ def calculate_monthly_cost(conversations):
                                 date,
                                 0,
                                 tokens,
-                                vision_images_count,
-                                dalle_images_count,
+                                0,
+                                0,
                                 0,
                                 0,
                             ]
@@ -178,8 +170,8 @@ def calculate_monthly_cost(conversations):
                             date,
                             0,
                             0,
-                            vision_images_count,
-                            dalle_images_count,
+                            0,
+                            1,
                             0,
                             m["cost"],
                         ]
@@ -190,8 +182,8 @@ def calculate_monthly_cost(conversations):
                             date,
                             0,
                             0,
-                            vision_images_count,
-                            dalle_images_count,
+                            1,
+                            0,
                             m["cost"],
                             0,
                         ]
