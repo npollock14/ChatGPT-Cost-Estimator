@@ -69,7 +69,7 @@ Total cost for ChatGPT Plus including subscription: $240.00
 2. Click on the user icon or the three dots in the bottom left corner.
 3. Settings > Data Controls > Export data.
 4. Download the data from the link provided in the email.
-5. Rename the downloaded file to `conversations.json` and place it in the repo root.
+5. Extract `conversations.json` and place it in the repo root.
 
 ## How to use ChatGPT Cost Estimator
 
