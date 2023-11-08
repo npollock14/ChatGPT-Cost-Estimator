@@ -4,32 +4,39 @@
 
 Use this tool to estimate if it may be more cost effective to use ChatGPT Plus or the OpenAI API.
 
-**Note:** This tool assumes GPT-4 8k context api pricing for all conversations.
+**Note:** Updated for GPT-4 Turbo! This tool assumes GPT-4 Turbo 128k context api pricing for all conversations. See the pricing constants in use below.
 
 ## Pricing constants:
+
 Source: [OpenAI API Pricing](https://openai.com/pricing)
-* Input @ $0.03 / 1K tokens	 
-* Output @ $0.06 / 1K tokens
+
+- Input @ $0.01 / 1K tokens
+- Output @ $0.03 / 1K tokens
+- DALL·E 3 @ $0.040 / image
+- Vision (computed from dimensions) - see [Vision Cost Calculator](https://github.com/npollock14/ChatGPT-Cost-Estimator/blob/main/vision_cost_estimator.py)
 
 ## Example Output
 
 ```
-         Date  Input Tokens  Output Tokens  Input Cost  Output Cost  Total Cost
-  August 2023       1626585         169996      $48.80       $10.20      $59.00
-    July 2023       1473313         182852      $44.20       $10.97      $55.17
-    June 2023       1239789         166160      $37.19        $9.97      $47.16
-     May 2023        788586         244757      $23.66       $14.69      $38.35
-   April 2023        382448          74385      $11.47        $4.46      $15.93
-   March 2023        431761         108606      $12.95        $6.52      $19.47
-February 2023        676726          76011      $20.30        $4.56      $24.86
- January 2023         82320          21323       $2.47        $1.28       $3.75
-December 2022        580324          43087      $17.41        $2.59      $20.00
+          Date  Input Tokens  Output Tokens  Vision Images Sent  Dall-E Images Received  Vision Cost  Dall-E Cost  Input Cost  Output Cost  Total Cost
+ November 2023        141211          48604                  11                      24        $0.03        $0.16       $1.41        $1.46       $3.06
+  October 2023       1494391         186593                 318                     432        $0.29        $1.28      $14.94        $5.60      $22.11
+September 2023       1406768         207387                   0                       0        $0.00        $0.00      $14.07        $6.22      $20.29
+   August 2023       2644863         184873                   0                       0        $0.00        $0.00      $26.45        $5.55      $32.00
+     July 2023       1914384         182852                   0                       0        $0.00        $0.00      $19.14        $5.49      $24.63
+     June 2023       1652295         166160                   0                       0        $0.00        $0.00      $16.52        $4.98      $21.50
+      May 2023        948845         244757                   0                       0        $0.00        $0.00       $9.49        $7.34      $16.83
+    April 2023        431607          74385                   0                       0        $0.00        $0.00       $4.32        $2.23       $6.55
+    March 2023        431761         108606                   0                       0        $0.00        $0.00       $4.32        $3.26       $7.58
+ February 2023        849088          76011                   0                       0        $0.00        $0.00       $8.49        $2.28      $10.77
+  January 2023         82320          21323                   0                       0        $0.00        $0.00       $0.82        $0.64       $1.46
+ December 2022        640070          43087                   0                       0        $0.00        $0.00       $6.40        $1.29       $7.69
 
 Aggregate Costs:
- Input Tokens  Output Tokens  Input Cost  Output Cost  Total Cost
-      7281852        1087177     $218.45       $65.24     $283.69
+ Input Tokens  Output Tokens  Vision Images Sent  Dall-E Images Received  Input Cost  Output Cost  Vision Cost  Dall-E Cost  Total Cost
+     12637603        1544638                 329                     456     $126.37       $46.34        $0.32        $1.44     $174.47
 
-Total cost for ChatGPT Plus: $180.00
+Total cost for ChatGPT Plus including subscription: $240.00
 ```
 
 ## Prerequisites
@@ -40,21 +47,21 @@ Total cost for ChatGPT Plus: $180.00
 
 1. Clone this repository to your local machine.
 
-    ```bash
-    git clone https://github.com/npollock14/ChatGPT-Cost-Estimator.git
-    ```
+   ```bash
+   git clone https://github.com/npollock14/ChatGPT-Cost-Estimator.git
+   ```
 
 2. Navigate to the cloned directory.
 
-    ```bash
-    cd ChatGPT-Cost-Estimator
-    ```
+   ```bash
+   cd ChatGPT-Cost-Estimator
+   ```
 
 3. Install the required Python libraries:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Obtaining the conversations.json file
 
@@ -69,7 +76,7 @@ Total cost for ChatGPT Plus: $180.00
 1. Ensure that the conversations.json file is in the root of the repository folder.
 2. Run the `chatgpt_cost_estimator.py` script.
 
-    The script will display the monthly token counts and costs for both input and output, as well as the total estimated costs for using the ChatGPT API vs. ChatGPT Plus.
+   The script will display the monthly token counts and costs for both input and output, as well as the total estimated costs for using the ChatGPT API vs. ChatGPT Plus.
 
 ## License
 
