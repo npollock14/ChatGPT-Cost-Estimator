@@ -6,7 +6,7 @@ with open("requirements.txt", encoding="utf-16") as f:
 
 setup(
     name="chatgpt-cost-estimator",
-    version="0.1.1",
+    version="0.1.2",
     packages=find_packages(),
     description="A cost estimation tool for your ChatGPT Plus conversation history.",
     url="https://github.com/npollock14/ChatGPT-Cost-Estimator",
