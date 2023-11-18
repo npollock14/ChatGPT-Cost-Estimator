@@ -1,4 +1,5 @@
 # ChatGPT Cost Estimator
+
 **Note:** Updated for GPT-4 Turbo 128k + Vision + DALL·E!
 
 `ChatGPT-Cost-Estimator` is a tool designed to estimate the costs of your ChatGPT Plus conversation history as if it were executed using the OpenAI API. It uses the `conversations.json` file exported from ChatGPT and estimates OpenAI API monthly costs based on token count.
@@ -42,9 +43,27 @@ Total cost for ChatGPT Plus including subscription: $240.00
 
 ## Prerequisites
 
-- Python (tested with Python 3.11)
+- Python3 (tested with Python 3.11)
 
-## Installation
+## Usage
+
+### From PyPi package
+
+1. Install the package.
+
+   ```bash
+   pip install chatgpt-cost-estimator
+   ```
+
+2. Run the `chatgpt_cost_estimator` command with the conversations.json file as an argument.
+
+   ```bash
+   chatgpt_cost_estimator conversations.json
+   ```
+
+   **Note:** If no argument is provided, the script will look for a `conversations.json` file in the current directory.
+
+### From source
 
 1. Clone this repository to your local machine.
 

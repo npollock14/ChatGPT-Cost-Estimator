@@ -3,6 +3,7 @@ from datetime import datetime
 import tiktoken
 import pandas as pd
 from vision_cost_estimator import calculate_vision_cost
+import argparse
 
 enc = tiktoken.encoding_for_model("gpt-4")
 
@@ -285,7 +286,22 @@ def display_costs(df_monthly):
     pd.options.display.float_format = None
 
 
-if __name__ == "__main__":
-    conversations = load_json_file("conversations.json")
+def main():
+    parser = argparse.ArgumentParser(description="ChatGPT Cost Estimator")
+    # Set the default value for file_path to './conversations.json'
+    parser.add_argument(
+        "file_path",
+        type=str,
+        nargs="?",
+        default="./conversations.json",
+        help="Path to the JSON file containing conversations data (default: ./conversations.json)",
+    )
+
+    args = parser.parse_args()
+    conversations = load_json_file(args.file_path)
     df_monthly = calculate_monthly_cost(conversations)
     display_costs(df_monthly)
+
+
+if __name__ == "__main__":
+    main()
