@@ -99,13 +99,6 @@ Total cost for ChatGPT Plus including subscription: $240.00
 4. Download the data from the link provided in the email.
 5. Extract `conversations.json` and place it in the repo root.
 
-## How to use ChatGPT Cost Estimator
-
-1. Ensure that the conversations.json file is in the root of the repository folder.
-2. Run the `chatgpt_cost_estimator.py` script.
-
-   The script will display the monthly token counts and costs for both input and output, as well as the total estimated costs for using the ChatGPT API vs. ChatGPT Plus.
-
 ## License
 
 This project is open source and available under the MIT License.
