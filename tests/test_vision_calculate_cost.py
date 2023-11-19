@@ -1,6 +1,6 @@
 import pytest
 
-from vision_cost_estimator import calculate_vision_cost
+from chatgpt_cost_estimator.vision_cost_estimator import calculate_vision_cost
 
 
 @pytest.mark.parametrize(
