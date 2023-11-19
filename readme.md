@@ -55,13 +55,13 @@ Total cost for ChatGPT Plus including subscription: $240.00
    pip install chatgpt-cost-estimator
    ```
 
-2. Run the `chatgpt_cost_estimator` command with the conversations.json file as an argument.
+2. Run the `chatgpt-cost-estimator` command with the conversations.json file path as an optional argument.
 
    ```bash
-   chatgpt_cost_estimator conversations.json
+   chatgpt-cost-estimator conversations.json
    ```
 
-   **Note:** If no argument is provided, the script will look for a `conversations.json` file in the current directory.
+   **Note:** If no argument is provided, the script will look for a "conversations.json" file in the current directory.
 
 ### From source
 
@@ -82,6 +82,14 @@ Total cost for ChatGPT Plus including subscription: $240.00
    ```bash
    pip install -r requirements.txt
    ```
+
+4. Run the run_script.py script with the conversations.json file path as an optional argument.
+
+   ```bash
+   python run_script.py conversations.json
+   ```
+
+   **Note:** If no argument is provided, the script will look for a "conversations.json" file in the current directory.
 
 ## Obtaining the conversations.json file
 

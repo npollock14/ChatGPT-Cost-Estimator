@@ -6,8 +6,12 @@ name: Pytest
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "readme.md"
   pull_request:
     branches: ["main"]
+    paths-ignore:
+      - "readme.md"
 
 permissions:
   contents: read

@@ -3,6 +3,8 @@ name: Python Package Development CI
 on:
   push:
     branches: [dev]
+    paths-ignore:
+      - "readme.md"
 
 jobs:
   build-and-upload:
