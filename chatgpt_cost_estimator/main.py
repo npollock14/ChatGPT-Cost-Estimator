@@ -2,8 +2,8 @@ import json
 from datetime import datetime
 import tiktoken
 import pandas as pd
-from vision_cost_estimator import calculate_vision_cost
 import argparse
+from .vision_cost_estimator import calculate_vision_cost
 
 enc = tiktoken.encoding_for_model("gpt-4")
 
@@ -301,7 +301,3 @@ def main():
     conversations = load_json_file(args.file_path)
     df_monthly = calculate_monthly_cost(conversations)
     display_costs(df_monthly)
-
-
-if __name__ == "__main__":
-    main()
