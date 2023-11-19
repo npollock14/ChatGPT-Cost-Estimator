@@ -19,7 +19,7 @@ setup(
             "chatgpt-cost-estimator=chatgpt_cost_estimator.main:main",
         ],
     },
-    python_requires=">=3.6",
+    python_requires=">=3.11",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
